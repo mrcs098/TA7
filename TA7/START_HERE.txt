@@ -1,0 +1,62 @@
+IT0049 TFA7 - COUNTER POS
+
+This project extends the TA6 source you supplied. It contains the original pages
+plus customer/user create and edit forms, validation, and prepared user avatars.
+
+FIRST RUN ON WINDOWS
+1. Extract the ZIP into a separate folder.
+2. Open the inner TA7 folder containing artisan and composer.json.
+3. Double-click setup-windows.bat.
+4. Wait for Composer and database setup.
+5. Open http://127.0.0.1:8000. Keep the command window open.
+
+PHP 8.2+ and Composer 2 must be on PATH. GD, Fileinfo, Mbstring, and PDO SQLite
+must be enabled. The setup checks the required image/database extensions.
+No npm build or MySQL server is required.
+
+MANUAL COMMANDS
+Open a terminal inside the TA7 project and run one command at a time:
+  composer install
+  php scripts/setup.php
+  composer test
+  php artisan serve --host=127.0.0.1 --port=8000
+
+The first Composer installation generates a new composer.lock for TA7's image
+dependency. Include that generated file when uploading your project to GitHub.
+
+TRY THESE FEATURES
+- Customers -> Create customer -> save a new customer.
+- Click Edit on an existing customer. Its details should already be filled in.
+- Users -> Create user -> save a team member.
+- Click Edit on that user and choose a picture under Profile picture.
+- Save and check the prepared square avatar on the Users page.
+- Submit invalid data and check the errors and retained text.
+- Leave the picture and password blank on edit to keep their current values.
+
+AVATAR NOTES
+Intervention Image v3 with PHP GD prepares a 256 x 256 JPEG thumbnail.
+Input: JPG, PNG, GIF, or WebP; maximum 2 MB and 4096 x 4096 pixels.
+The assignment requires an instructor-approved image package; confirm that
+Intervention Image is approved for your class.
+If validation fails, select the file again. Browsers cannot restore file inputs.
+
+IF YOU WANT YOUR LATER LOCAL TA6 RECORDS
+This ZIP includes the same fictional sample accounts as the supplied TA6 ZIP.
+To retain later edits from your computer, copy your local TA6 .env and SQLite
+file into this project before setup, updating DB_DATABASE if it is an absolute
+path. The setup adds the avatar column and preserves existing records.
+See README.md for the full upgrade instructions.
+
+BEFORE SUBMISSION
+1. Run composer test and check the forms in your browser.
+2. Upload raw project files to the intended TA7 GitHub repository.
+3. Deploy those files to Render and test the forms and image upload there.
+4. Replace the TA7 repository and live URL placeholders in README.md.
+5. Submit BOTH URLs.
+
+PHP/Composer runtime checks have not been run in the preparation workspace.
+The source is provided with an integration runner and browser checklist.
+
+Render Free loses SQLite changes and uploaded pictures on restart/redeploy.
+README.md explains the persistent disk option for retained hosted records.
+The project has not been pushed or deployed for you.

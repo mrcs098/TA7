@@ -1,0 +1,10 @@
+@extends('layouts.app')
+@section('title', 'About')
+@section('content')
+    <div class="page-heading"><p class="eyebrow">ABOUT COUNTER POS</p><h1>Good business starts<br>with <em>good organization.</em></h1><p class="lead">Counter POS brings customer information and staff accounts into a clear, connected workspace.</p></div>
+    <div class="about-grid">
+        <section class="content-panel"><span class="card-index">OUR PURPOSE</span><h2>A foundation for the everyday.</h2><p>Counter POS provides a landing page, an introduction to the application, and dedicated directories for customers and users.</p><p>Create and edit customer contact details, manage staff account information, and add a profile picture for each team member. Forms explain any corrections needed and keep the details you have already entered.</p><p>Changes are saved to the application's database and appear in the account directories and home page totals.</p></section>
+        <section class="content-panel"><span class="card-index">PROJECT DETAILS</span><h2>Laravel POS Account Management</h2><dl class="details-list"><div><dt>Course</dt><dd>IT0049 Web System Technologies</dd></div><div><dt>Activity</dt><dd>TFA7 &middot; Making It Editable in Laravel</dd></div><div><dt>Framework</dt><dd>Laravel 12 &amp; Blade</dd></div><div><dt>Architecture</dt><dd>Model&ndash;View&ndash;Controller</dd></div><div><dt>Data source</dt><dd>SQLite through Eloquent</dd></div></dl></section>
+    </div>
+    <section class="section-space"><div class="section-top"><h2>Explore the application</h2></div><div class="feature-grid"><a class="feature-card compact" href="{{ route('home') }}"><span class="card-index">START HERE</span><h3>Home &rarr;</h3><p>A quick overview of the workspace.</p></a><a class="feature-card compact" href="{{ route('customers') }}"><span class="card-index">CUSTOMER DIRECTORY</span><h3>Customers &rarr;</h3><p>Customer profiles and contact details.</p></a><a class="feature-card compact" href="{{ route('users') }}"><span class="card-index">TEAM DIRECTORY</span><h3>Users &rarr;</h3><p>Staff accounts and assigned roles.</p></a></div></section>
+@endsection
